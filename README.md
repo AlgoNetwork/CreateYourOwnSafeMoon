@@ -5,5 +5,5 @@ Prepare:<br>
 2.Install MetaMask<br>
 3.Send some BNB to your metamask account.
 <br><br>
-Create your own safemoon on binance chain mainnetwork.<br>
+Create your own safemoon token on binance chain mainnetwork.<br>
 https://algonetwork.github.io/CreateYourOwnSafeMoon/
