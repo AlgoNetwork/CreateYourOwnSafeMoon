@@ -17,7 +17,7 @@ Prepare:<br>
 4.After you press the submit button, there will be two confirmation boxes, 
 the first is to confirm the spent handling fee, and the second is to confirm the spent gas fee.
 
-# Must Deploy Under Binance Chain.<br>
+# Must Deploy On Binance Chain.<br>
 # 1.Token Infomation.
 <img src="https://raw.githubusercontent.com/AlgoNetwork/CreateYourOwnSafeMoon/main/safemoon1.png" alt="1--token">
 
