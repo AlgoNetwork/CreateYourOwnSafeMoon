@@ -1,4 +1,4 @@
-# Create Your Own SafeMoon
+# Create Your Own SafeMoon on Binance
 <br>
 
 <br>
