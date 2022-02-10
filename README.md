@@ -10,7 +10,7 @@ Symbol: BNB<br>
 Block Explorer URL: https://bscscan.com/<br>
 <br>
 <br>
-Prepare:<br>
+Preparation:<br>
 1.Install Chrome<br>
 2.Install MetaMask<br>
 3.Send some BNB to your metamask account.<br>
